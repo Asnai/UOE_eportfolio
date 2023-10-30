@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+  <head>
+    <title>Data Normalisation and Database build</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, user-scalable=no"
+    />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript
+      ><link rel="stylesheet" href="assets/css/noscript.css"
+    /></noscript>
+  </head>
+  <body class="is-preload">
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <!-- Header -->
+      <header id="header">
+        <a href="index.html" class="logo"
+          ><strong>Asnai Narang</strong>
+        <nav>
+          <a href="#menu">Menu</a>
+        </nav>
+      </header>
+
+      <!-- Menu -->
+      <nav id="menu">
+        <ul class="links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="landing.html">Landing</a></li>
+          <li><a href="generic.html">Generic</a></li>
+          <li><a href="elements.html">Elements</a></li>
+        </ul>
+        <ul class="actions stacked">
+          <li><a href="#" class="button primary fit">Get Started</a></li>
+          <li><a href="#" class="button fit">Log In</a></li>
+        </ul>
+      </nav>
+
+      <!-- Main -->
+      <div id="main" class="alt">
+        <!-- One -->
+        <section id="one">
+          <div class="inner">
+            <header class="major">
+              <h1>Data Normalisation and Database build</h1>
+            </header>
+            <span class="image main"
+              ><img src="images/pic11.jpg" alt=""
+            /></span>
+            <p>Create three tables</p>
+            <p>Student Table (Student Number, Student Name, Date of Birth)<br>
+              Course Table (Course Name, Exam Boards, Teacher Name)<br>
+              Exam Table (Student Number, Course Name, Exam Score, Support)</p>
+
+              <p>The data should be organized into separate tables, where each table has a primary key, and there are no repeating groups. Each table should contain only atomic values.</p>
+            <h3>EXAM Table</h3>
+            <table><tr><td></td><td>EXAM Table</td><td></td></tr><tr><td>Student Number</td><td>Course Name</td><td>Exam Score</td></tr><tr><td>1001</td><td>Computer Science</td><td>78</td></tr><tr><td>1001</td><td>Maths</td><td>78</td></tr><tr><td>1001</td><td>Physics</td><td>78</td></tr><tr><td>1002</td><td>Maths</td><td>55</td></tr><tr><td>1002</td><td>Biology</td><td>55</td></tr><tr><td>1002</td><td>Music</td><td>55</td></tr><tr><td>1003</td><td>Computer Science</td><td>90</td></tr><tr><td>1003</td><td>Maths</td><td>90</td></tr><tr><td>1003</td><td>Physics</td><td>90</td></tr><tr><td>1004</td><td>Maths</td><td>70</td></tr><tr><td>1004</td><td>Physics</td><td>70</td></tr><tr><td>1004</td><td>Biology</td><td>70</td></tr><tr><td>1005</td><td>Computer Science</td><td>45</td></tr><tr><td>1005</td><td>Maths</td><td>45</td></tr><tr><td>1005</td><td>Music</td><td>45</td></tr></table>
+            <h3>Course Table</h3>
+            <table><tr><td>Course Name</td><td>Exam Boards</td><td>Teacher Name</td></tr><tr><td>Computer Science</td><td>BCS</td><td>Mr Jones</td></tr><tr><td>Maths</td><td>EdExcel</td><td>Ms Parker</td></tr><tr><td>Physics</td><td>OCR</td><td>Mr Peters</td></tr><tr><td>Biology</td><td>WJEC</td><td>Mrs Patel</td></tr><tr><td>Music</td><td>AQA</td><td>Ms Daniels</td></tr></table>
+            <h3>Student Table</h3>
+            <table><tr><td>Student Number</td><td>Student Name</td><td>Date of Birth</td></tr><tr><td>1001</td><td>Bob Baker</td><td>08/25/01</td></tr><tr><td>1002</td><td>Sally Davies</td><td>10/02/99</td></tr><tr><td>1003</td><td>Mark Hanmill</td><td>06/05/95</td></tr><tr><td>1004</td><td>Anas Ali</td><td>08/03/80</td></tr><tr><td>1005</td><td>Cheuk Yin</td><td>05/01/02</td></tr></table>
+            <h3>Second Normal Form (2NF)</h3>
+
+            <p>In the 1NF state, we have correctly separated the data into tables with primary keys. To achieve 2NF, we need to ensure that the partial dependencies are eliminated. In this case, there are no partial dependencies.</p>
+            <h3>Third Normal Form (3NF)</h3>
+
+<p>In the 1NF and 2NF state, there are no transitive dependencies. So, the data is already in 3NF.</p>
+
+<p>The data is now normalized into the First Normal Form (1NF), Second Normal Form (2NF), and Third Normal Form (3NF), ensuring data integrity and reducing redundancy.</p>
+<h3>Database Design</h3>  
+
+<img src="images/Database.png"  style="width:800px;height:300px;"> 
+<ul class="actions">
+  <li><a href="sql/data_normal.sql" class="button">SQL Script </a></li>
+</ul>
+</div>
+        </section>
+      </div>
+
+      <!-- Contact -->
+      <section id="contact">
+        <div class="inner">
+          <section>
+            <form method="post" action="#">
+              <div class="fields">
+                <div class="field half">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" id="name" />
+                </div>
+                <div class="field half">
+                  <label for="email">Email</label>
+                  <input type="text" name="email" id="email" />
+                </div>
+                <div class="field">
+                  <label for="message">Message</label>
+                  <textarea name="message" id="message" rows="6"></textarea>
+                </div>
+              </div>
+              <ul class="actions">
+                <li>
+                  <input type="submit" value="Send Message" class="primary" />
+                </li>
+                <li><input type="reset" value="Clear" /></li>
+              </ul>
+            </form>
+          </section>
+          <section class="split">
+            <section>
+              <div class="contact-method">
+                <span class="icon solid alt fa-envelope"></span>
+                <h3>Email</h3>
+                <a href="#">information@untitled.tld</a>
+              </div>
+            </section>
+            <section>
+              <div class="contact-method">
+                <span class="icon solid alt fa-phone"></span>
+                <h3>Phone</h3>
+                <span>(000) 000-0000 x12387</span>
+              </div>
+            </section>
+            <section>
+              <div class="contact-method">
+                <span class="icon solid alt fa-home"></span>
+                <h3>Address</h3>
+                <span
+                  >1234 Somewhere Road #5432<br />
+                  Nashville, TN 00000<br />
+                  United States of America</span
+                >
+              </div>
+            </section>
+          </section>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer id="footer">
+        <div class="inner">
+          <ul class="icons">
+            <li>
+              <a href="#" class="icon brands alt fa-twitter"
+                ><span class="label">Twitter</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands alt fa-facebook-f"
+                ><span class="label">Facebook</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands alt fa-instagram"
+                ><span class="label">Instagram</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands alt fa-github"
+                ><span class="label">GitHub</span></a
+              >
+            </li>
+            <li>
+              <a href="#" class="icon brands alt fa-linkedin-in"
+                ><span class="label">LinkedIn</span></a
+              >
+            </li>
+          </ul>
+          <ul class="copyright">
+            <li>&copy; Untitled</li>
+            <li>Design: <a href="https://html5up.net">HTML5 UP</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
